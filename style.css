@@ -1,0 +1,63 @@
+.container {
+  width: 800px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "chestArea chestArea chestArea chestArea headerArea headerArea"
+    "chestArea chestArea chestArea chestArea inventoryArea inventoryArea"
+    "chestArea chestArea chestArea chestArea inventoryArea inventoryArea"
+    "chestArea chestArea chestArea chestArea inventoryArea inventoryArea"
+    "chestArea chestArea chestArea chestArea inventoryArea inventoryArea"
+    "chestInventory chestInventory chestInventory chestInventory inventoryArea inventoryArea"
+    "chestInventory chestInventory chestInventory chestInventory inventoryArea inventoryArea"
+    "chestInventory chestInventory chestInventory chestInventory inventoryArea inventoryArea"
+    "chestInventory chestInventory chestInventory chestInventory inventoryArea inventoryArea"
+    "chestInventory chestInventory chestInventory chestInventory inventoryButtonArea equipmentButtonArea";
+}
+
+.inventorystyle {
+    border: 2px black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.gameItems {
+/* display: flex;
+justify-items: stretch;
+border: 1px solid black;
+padding:  10px;
+text-align: center;
+cursor: pointer; */
+background-color: burlywood;
+
+}
+
+#chestInventory {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "chestItem1 chestItem2 chestItem3";
+  
+}
+
+.chestImg {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 10%;
+}
+
+.selectedItem {
+  border: 2px solid gold; /* Highlight border color */
+}
+
+
+
+
+/* .container * {
+  border: 3px solid black;
+  margin: 1px;
+}
+ */
