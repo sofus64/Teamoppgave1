@@ -1,7 +1,0 @@
-- funskjon for å oppdatere inventory/kiste      (sofus)
-- funskjon for å flytte items                   (frode)
-- funksjon for å vise/skjule inventory         (andre)
-- funksjon for å vise/skjule kiste            (frank)
-
-
-
