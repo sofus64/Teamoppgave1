@@ -5,46 +5,48 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    "chestArea chestArea chestArea chestArea headerArea headerArea"
-    "chestArea chestArea chestArea chestArea inventoryArea inventoryArea"
-    "chestArea chestArea chestArea chestArea inventoryArea inventoryArea"
-    "chestArea chestArea chestArea chestArea inventoryArea inventoryArea"
-    "chestArea chestArea chestArea chestArea inventoryArea inventoryArea"
+    "chestInventory chestInventory chestInventory chestInventory headerArea headerArea"
     "chestInventory chestInventory chestInventory chestInventory inventoryArea inventoryArea"
     "chestInventory chestInventory chestInventory chestInventory inventoryArea inventoryArea"
     "chestInventory chestInventory chestInventory chestInventory inventoryArea inventoryArea"
     "chestInventory chestInventory chestInventory chestInventory inventoryArea inventoryArea"
-    "chestInventory chestInventory chestInventory chestInventory inventoryButtonArea inventoryButtonArea";
+    "chestArea chestArea chestArea chestArea  inventoryArea inventoryArea"
+    "chestArea chestArea chestArea chestArea inventoryArea inventoryArea"
+    "chestArea chestArea chestArea chestArea inventoryArea inventoryArea"
+    "chestArea chestArea chestArea chestArea inventoryArea inventoryArea"
+    "chestArea chestArea chestArea chestArea inventoryButtonArea inventoryButtonArea";
+    background-image: url("/img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 20px solid black;
 }
-
 
 .gameItems {
-padding:  20px;
-text-align: center;
-cursor: pointer;
-display: flex inline;
-justify-content: center;
-
+  padding: 20px;
+  text-align: center;
+  display: flex inline;
+  justify-content: center;
 }
 
-[id="chestInside"]{
+[id="chestInside"] {
   width: 90%;
   height: 90%;
   margin: 2% 5% 5% 5%;
   background-color: burlywood;
   box-sizing: border-box;
   border: 5px solid black;
-  
 }
-.inventoryHeader{
-display: flex;
-justify-content: center;
-border: 5px solid black;
-font-weight: 800;
-padding: 10%;
+.inventoryHeader {
+  display: flex;
+  justify-content: center;
+  border: 5px solid black;
+  font-weight: 800;
+  font-size: large;
+  padding: 10%;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-[id="inventoryInside"]{
+[id="inventoryInside"] {
   width: 90%;
   height: 90%;
   margin: 5%;
@@ -61,19 +63,16 @@ padding: 10%;
   } */
 
 .chestImg {
-    width: 25%;
-    display: flex;
-    align-items: center;
-    margin-left: 40%;
-    margin-top: 10%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  margin-left: 40%;
+  margin-top: 10%;
 }
 
 .selectedItem {
   border: 2px solid gold; /* Highlight border color */
 }
-
-
-
 
 /* .container * {
   border: 3px solid black;
@@ -81,24 +80,39 @@ padding: 10%;
 }
  */
 
+.inventoryButton {
+  background-image: linear-gradient(135deg, burlywood 30%, rgb(158, 135, 101));
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
- .inventoryButton {
-    background-image: linear-gradient(135deg, burlywood 30%, rgb(158, 135, 101));
-    border: 2px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
- }
+.inventoryButton > img {
+  width: 50px;
+  height: 50px;
+  max-height: 50px;
+  max-width: 50px;
+}
 
- .inventoryButton > img{
-    width: 50px;
-    height: 50px;
-    max-height: 50px;
-    max-width: 50px;
- }
-
- .inventoryButton:hover {
-  background-image: linear-gradient(135deg, rgb(233, 201, 159) 30%, rgb(182, 159, 126));
+.inventoryButton:hover {
+  background-image: linear-gradient(
+    135deg,
+    rgb(233, 201, 159) 30%,
+    rgb(182, 159, 126)
+  );
   border: 2px solid rgb(168, 168, 35);
- }
+}
+
+#chestImg {
+  cursor: pointer;
+  width: 256px;
+  height: 256px;
+  user-select: none;
+}
+
+
+.itemImg {
+  cursor: pointer;
+  user-select: none;
+}

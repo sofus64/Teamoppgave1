@@ -12,6 +12,7 @@ let inventoryData = ""
 let sword = 0;
 let shield = 0;
 let helmet = 0;
+let chestImage = document.getElementById('chestImage');
 
 let chestDiv = document.getElementById("chestInventory");
 
@@ -38,9 +39,9 @@ function createData() {
 function createChestData() {
     chestData =`
     <div id="chestInside">
-    <div id="chestItem1" class="gameItems" onclick="moveItem('sword')"></div>
-    <div id="chestItem2" class="gameItems" onclick="moveItem('shield')"></div>
-    <div id="chestItem3" class="gameItems" onclick="moveItem('helmet')"></div>
+    <div id="chestItem1" class="gameItems" ></div>
+    <div id="chestItem2" class="gameItems" ></div>
+    <div id="chestItem3" class="gameItems" ></div>
     </div>
 `
 }
@@ -48,12 +49,14 @@ function createChestData() {
 function createInventoryData() {
     inventoryData =`
     <div id="inventoryInside">
-    <div onclick="moveItem('sword')" id="inventoryItem1" class="gameItems" style="grid-area: chestItem1;"></div>
-    <div onclick="moveItem('shield')" id="inventoryItem2" class="gameItems" style="grid-area: chestItem2;"></div>
-    <div onclick="moveItem('helmet')" id="inventoryItem3" class="gameItems" style="grid-area: chestItem3;"></div>
+    <div id="inventoryItem1" class="gameItems" style="grid-area: chestItem1;"></div>
+    <div id="inventoryItem2" class="gameItems" style="grid-area: chestItem2;"></div>
+    <div id="inventoryItem3" class="gameItems" style="grid-area: chestItem3;"></div>
     </div>
     `
 }
+
+
 
 function moveItem(currentItem) {
   if (currentItem == 'sword') {
@@ -78,48 +81,52 @@ function moveItem(currentItem) {
 
 function updateInventory() {
     createData()
-
+    
     
     console.log("run")
 
-  if (sword == 1 && inventorystatus == 1) {
+  if (sword === 1 && inventorystatus == 1) {
     inventory1.innerHTML = /*HTML*/ ` 
-        <img src="img/sword.webp"> `;
-    chest1.innerHTML = /*HTML*/ ``;
-    console.log("sverd i inventory");
-  } else if (sword == 0 && chestOpen) {
+        <img onclick="moveItem('sword')" class="itemImg" src="img/sword.webp"> `;
+        if (chestOpen) {
+        chest1.innerHTML = /*HTML*/ ``;
+        };
+  } else if (sword === 0 && chestOpen) {
     chest1.innerHTML = /*HTML*/ `
-        <img src="img/sword.webp"> `;
-    inventory1.innerHTML = /*HTML*/ ``;
-    console.log("sverd i kiste");
+        <img onclick="moveItem('sword')" class="itemImg" src="img/sword.webp"> `;
+        if(inventorystatus == 1) {
+          inventory1.innerHTML = /*HTML*/ ``;
+        }
+
   }
 
-  if (shield == 1 && inventorystatus == 1) {
+  if (shield === 1 && inventorystatus == 1) {
     inventory2.innerHTML = /*HTML*/ `
-        <img src="img/shield.webp"> `;
+        <img onclick="moveItem('shield')" class="itemImg" src="img/shield.webp"> `;
+        if (chestOpen) {
     chest2.innerHTML = /*HTML*/ ``;
-    console.log("skjold i inv")
-  } else if (shield == 0 && chestOpen) {
+        };
+  } else if (shield === 0 && chestOpen) {
     chest2.innerHTML = /*HTML*/ `
-        <img src="img/shield.webp"> `;
-    inventory2.innerHTML = /*HTML*/ ``;
-    console.log("shield i kiste")
+        <img onclick="moveItem('shield')" class="itemImg" src="img/shield.webp"> `;
+        if(inventorystatus == 1) {
+          inventory2.innerHTML = /*HTML*/ ``;
+        }
   }
 
-  if (helmet == 1 && inventorystatus == 1) {
+  if (helmet === 1 && inventorystatus == 1) {
     inventory3.innerHTML = /*HTML*/ `
-        <img src="img/helmet.webp"> `;
+        <img onclick="moveItem('helmet')" class="itemImg" src="img/helmet.webp"> `;
+        if (chestOpen) {
     chest3.innerHTML = /*HTML*/ ``;
-    console.log("hjelm i inventory");
-  } else if (helmet == 0 && chestOpen) {
+        };
+  } else if (helmet === 0 && chestOpen) {
     chest3.innerHTML = /*HTML*/ `
-        <img src="img/helmet.webp"> `;
-    inventory3.innerHTML = /*HTML*/ ``;
-    console.log("hjelm i kiste")
+        <img onclick="moveItem('helmet')" class="itemImg" src="img/helmet.webp"> `;
+        if(inventorystatus == 1) {
+          inventory3.innerHTML = /*HTML*/ ``;
+        }
   }
-  console.log(shield)
-  console.log(sword)
-  console.log(helmet)
 }
 
 
@@ -150,14 +157,18 @@ function openChest() {
     chestDiv.innerHTML = /*HTML*/ `
     ${chestData}
     `;
+    document.getElementById('chestImg').src = 'img/openChest.png'
     chestOpen = true;
+    
     
   } else if (chestOpen) {
     chestDiv.innerHTML = /*HTML*/ `
     `;
+    document.getElementById('chestImg').src = 'img/closedChest.png'
     chestOpen = false;
   }
   updateInventory();
+
 }
 
 // function moveItem(currentItem) {

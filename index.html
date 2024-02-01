@@ -11,7 +11,7 @@
     <div class="container">
         <div style="grid-area: chestArea;">
             <div id="chestDiv">
-                <img class="chestImg" onclick="openChest()" src="img/kiste.jpg"  alt="">
+                <img id="chestImg" onclick="openChest()" src="img/closedChest.png"  alt="">
             </div>
             
             
@@ -20,7 +20,7 @@
         <div id="chestInventory" style="grid-area: chestInventory;">
         </div>
             
-        <div class ="inventoryHeader" id="inventoryHeader" style="grid-area: headerArea; background-color: yellow">
+        <div class ="inventoryHeader" id="inventoryHeader" style="grid-area: headerArea; background-color: burlywood">
         Inventory closed
         </div>
 
@@ -30,7 +30,7 @@
         </div>
 
         <div class="inventoryButton" onclick="toggleinventory()" style="grid-area: inventoryButtonArea;">
-            <img class="inventoryImg" src="img/inventory.webp">
+            <img class="itemImg" src="img/inventory.webp">
         </div>
 
         
@@ -39,5 +39,6 @@
     
 </body>
 <script src="script.js"></script>
+
 
 </html>
