@@ -14,32 +14,51 @@
     "chestInventory chestInventory chestInventory chestInventory inventoryArea inventoryArea"
     "chestInventory chestInventory chestInventory chestInventory inventoryArea inventoryArea"
     "chestInventory chestInventory chestInventory chestInventory inventoryArea inventoryArea"
-    "chestInventory chestInventory chestInventory chestInventory inventoryButtonArea equipmentButtonArea";
+    "chestInventory chestInventory chestInventory chestInventory inventoryButtonArea inventoryButtonArea";
 }
 
-.inventorystyle {
-    border: 2px black;
-    display: flex;
-    justify-content: space-around;
-}
 
 .gameItems {
-/* display: flex;
-justify-items: stretch;
-border: 1px solid black;
-padding:  10px;
+padding:  20px;
 text-align: center;
-cursor: pointer; */
-background-color: burlywood;
+cursor: pointer;
+display: flex inline;
+justify-content: center;
 
 }
 
+[id="chestInside"]{
+  width: 90%;
+  height: 90%;
+  margin: 2% 5% 5% 5%;
+  background-color: burlywood;
+  box-sizing: border-box;
+  border: 5px solid black;
+  
+}
+.inventoryHeader{
+display: flex;
+justify-content: center;
+border: 5px solid black;
+font-weight: 800;
+padding: 10%;
+}
+
+[id="inventoryInside"]{
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+  background-color: burlywood;
+  box-sizing: border-box;
+  border: 5px solid black;
+}
+/* 
 #chestInventory {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "chestItem1 chestItem2 chestItem3";
-  
-}
+    
+  } */
 
 .chestImg {
     width: 25%;
@@ -61,3 +80,25 @@ background-color: burlywood;
   margin: 1px;
 }
  */
+
+
+ .inventoryButton {
+    background-image: linear-gradient(135deg, burlywood 30%, rgb(158, 135, 101));
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+ }
+
+ .inventoryButton > img{
+    width: 50px;
+    height: 50px;
+    max-height: 50px;
+    max-width: 50px;
+ }
+
+ .inventoryButton:hover {
+  background-image: linear-gradient(135deg, rgb(233, 201, 159) 30%, rgb(182, 159, 126));
+  border: 2px solid rgb(168, 168, 35);
+ }

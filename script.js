@@ -37,17 +37,21 @@ function createData() {
 
 function createChestData() {
     chestData =`
+    <div id="chestInside">
     <div id="chestItem1" class="gameItems" onclick="moveItem('sword')"></div>
     <div id="chestItem2" class="gameItems" onclick="moveItem('shield')"></div>
     <div id="chestItem3" class="gameItems" onclick="moveItem('helmet')"></div>
+    </div>
 `
 }
 
 function createInventoryData() {
     inventoryData =`
+    <div id="inventoryInside">
     <div onclick="moveItem('sword')" id="inventoryItem1" class="gameItems" style="grid-area: chestItem1;"></div>
     <div onclick="moveItem('shield')" id="inventoryItem2" class="gameItems" style="grid-area: chestItem2;"></div>
     <div onclick="moveItem('helmet')" id="inventoryItem3" class="gameItems" style="grid-area: chestItem3;"></div>
+    </div>
     `
 }
 
@@ -164,3 +168,4 @@ function openChest() {
 //     return 1;
 //   }
 // }
+

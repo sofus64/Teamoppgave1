@@ -9,35 +9,34 @@
 
 <body>
     <div class="container">
-        <div style="grid-area: chestArea; background-color: red">
+        <div style="grid-area: chestArea;">
             <div id="chestDiv">
                 <img class="chestImg" onclick="openChest()" src="img/kiste.jpg"  alt="">
-
             </div>
             
             
         </div>
 
-        <div style="grid-area: chestInventory; background-color: brown;">
-
-            <div id="chestInventory">
-                
-            </div>
+        <div id="chestInventory" style="grid-area: chestInventory;">
         </div>
             
-        <div id="inventoryHeader" style="grid-area: headerArea; background-color: yellow">
+        <div class ="inventoryHeader" id="inventoryHeader" style="grid-area: headerArea; background-color: yellow">
         Inventory closed
         </div>
 
-        <div id="inventory" class="inventorystyle" style="grid-area: inventoryArea; background-color: green">
+        <div id="inventory" style="grid-area: inventoryArea;">
        
 
         </div>
 
-        <div onclick="toggleinventory()" style="grid-area: inventoryButtonArea; background-color: blue"></div>
+        <div class="inventoryButton" onclick="toggleinventory()" style="grid-area: inventoryButtonArea;">
+            <img class="inventoryImg" src="img/inventory.webp">
+        </div>
 
-        <div style="grid-area: equipmentButtonArea; background-color: purple"></div>
+        
     </div>
+
+    
 </body>
 <script src="script.js"></script>
 
