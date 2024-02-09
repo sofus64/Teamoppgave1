@@ -81,9 +81,6 @@ function moveItem(currentItem) {
 
 function updateInventory() {
     createData()
-    
-    
-    console.log("run")
 
   if (sword === 1 && inventorystatus == 1) {
     inventory1.innerHTML = /*HTML*/ ` 
